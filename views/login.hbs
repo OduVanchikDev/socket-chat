@@ -1,0 +1,25 @@
+
+{{#if flag}}
+<div>не верный пароль или логин</div>
+
+<form action="/login" method="POST">
+  <input type="text" name='name'>
+  <input type="password" name="pass">
+  <button type="submit">login</button>
+</form>
+<div>
+    <a href="/">home</a>
+    <a href="/reg">registration</a>
+  </div>
+  
+{{else}}
+<form action="/login" method="POST">
+  <input type="text" name='name'>
+  <input type="password" name="pass">
+  <button type="submit">login</button>
+</form>
+<div>
+    <a href="/">home</a>
+    <a href="/reg">registration</a>
+  </div>
+{{/if}}

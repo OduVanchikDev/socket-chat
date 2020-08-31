@@ -1,0 +1,39 @@
+{{#if username}}
+  <p>Список тем</p>
+{{#each post}}
+<div id='blockTarget'>
+  <ul>
+    <li><a class="a" href="/user/post/{{this._id}}" id="{{this._id}}">{{this.category}}</a></li>
+  </ul>
+  {{/each}}
+  <form method="GET" action="/user/add">
+    <button type="submit">добавить тему и пост</button>
+  </form>
+
+  <br/>
+  
+
+  
+  <div>
+    <a>{{username}}</a>
+    <a href="/out">logout</a>
+    <a href="/user/home">home</a>
+  </div>
+  {{else}}
+  <div>
+  <p>Список тем</p>
+    {{#each post}}
+    {{#if this.visible}}
+<div id='blockTarget'>
+  <ul>
+    <li><a class="a" href="/user/post/{{this._id}}" id="{{this._id}}">{{this.category}}</a></li>
+  </ul>
+  {{/if}}
+  {{/each}}
+    <a href="/login">login</a>
+    <a href="/reg">registration</a>
+  </div>
+  {{/if}}
+</div>
+
+

@@ -1,0 +1,10 @@
+<form action="/user/add/{{username}}" method="POST">
+  <label>категория<input type="text" name='category'></label>
+  <label>text<input type='text' name='text'></input></label>
+  <select  name='visible'>
+    <option value="none" hidden="">выбрать </option>
+    <option value='true'>общий доступ</option>
+    <option value='false'>только зарегистрированные</option>
+  </select>
+  <input type="submit">
+</form>

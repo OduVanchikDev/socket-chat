@@ -1,0 +1,12 @@
+
+{{#if flag}}
+<div>{{post.text}}</div>
+<p class='autor'><label>дата поста:{{post.date}}</label></p>
+<a href="/user/edit/{{post._id}}">edit</a>
+<a href="/user/del/{{post._id}}">del</a>
+<a href="/user/home">home</a>
+{{else}}
+<div>{{post.text}}</div>
+<p class='autor'><label>дата поста:{{post.date}}</label></p>
+<a href="/user/home">home</a>
+{{/if}}
